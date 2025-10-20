@@ -50,7 +50,6 @@ Saucedemo-Playwright/
 └── README.md
 ```
 **4) Running tests**
-Setup
 
 - Run All test files:
 ```
@@ -85,7 +84,3 @@ Playwright HTML report:
 > ⚙️ **Note:** Monocart is already configured in `reporter`.It aggregates run data into a single, modern HTML report.
 
 
-Verify successful checkout
-Navigate through checkout flow
-
-Verify successful checkout
