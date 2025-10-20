@@ -1,6 +1,8 @@
 Playwright JS — Setup & Execution Guide
 
 This README walks you through configuring and running a Playwright (JavaScript) test project.
+
+
 **1) Prerequisites**
 
 Node.js 18+
