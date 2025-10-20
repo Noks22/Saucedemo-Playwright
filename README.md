@@ -21,7 +21,7 @@ npx playwright install
 **3) Project structure**
 
 ```
-RESTFiL-BOOKER.HEROKUAPP/
+Saucedemo-Playwright/
 │
 ├── .github/workflows
 │
