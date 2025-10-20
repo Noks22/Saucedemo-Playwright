@@ -23,13 +23,6 @@ RESTFiL-BOOKER.HEROKUAPP/
 │
 ├── .github/workflows
 │
-├── lib/
-│   ├── builders/
-│   │   └── BookingPayloads.js
-│   └── services/
-│       ├── apiRequests.js
-│       └── authService.js
-│
 ├── node_modules/
 │
 ├── data/
@@ -88,30 +81,7 @@ Playwright HTML report:
     npx monocart show-report test-results/monocart-report.html`
     ```
 > ⚙️ **Note:** Monocart is already configured in `reporter`.It aggregates run data into a single, modern HTML report.
-Features Covered
-1. Authentication:
 
-Login with multiple user types
-
-Verify successful login and error messages
-
-2. Inventory Management:
-
-Add and remove products from cart
-
-Sort products alphabetically or by price
-
-3. Shopping Cart:
-
-Verify cart badge count
-
-Navigate to cart
-
-Remove items from cart
-
-4. Checkout Process:
-
-Navigate through checkout flow
 
 Verify successful checkout
 Navigate through checkout flow
