@@ -1,56 +1,93 @@
-Project Structure
-project-root/
+Playwright JS — Setup & Execution Guide
 
- pages/
-   LoginPage.js        # Handles login actions and verifications
-   InventoryPage.js    # Handles inventory actions and cart interactions
-   CartPage.js         # Handles adding items to cart
-   CheckoutPage.js     # Handles checkout process
+This README walks you through configuring and running a Playwright (JavaScript) test project.
+**1) Prerequisites**
 
- tests/
-   login.spec.js       # Tests authentication
-   inventory.spec.js   # Tests inventory actions (add/remove/sort)
-   cart.spec.js        # Tests shopping cart  
-   checkout.spec.js    # Tests checkout
+Node.js 18+
 
- data/
-   loginData.json      # Test users credentials
-   productsData.json   # Test inventory data
-   checkoutData.json   # Test checkout user details
-
- playwright.config.js   # Playwright configuration
-   README.md
-
-Setup
-Install dependencies:
+Verify:
+```
+node -v
+npm -v
+```
+**2) Install dependencies**
+```
 npm init playwright@latest
+npm i -D @playwright/test monocart-reporter 
+npx playwright install
+```
+**3) Project structure**
 
-Install Monocart Report:
-npm install --save-dev monocart-reporter
+```
+RESTFiL-BOOKER.HEROKUAPP/
+│
+├── .github/workflows
+│
+├── lib/
+│   ├── builders/
+│   │   └── BookingPayloads.js
+│   └── services/
+│       ├── apiRequests.js
+│       └── authService.js
+│
+├── node_modules/
+│
+├── data/
+│   └── loginData.json
+│   └── productsData.json
+│   └── checkoutData.json
+├── test-results/
+├── pages/
+│   ├── LoginPage.js
+│   ├── InventoryPage.js
+│   ├── CartPage.js
+│   ├── CheckoutPage.js
+│
+├── tests/
+│   ├── login.spec.js 
+│   ├── inventory.spec.js
+│   ├── cart.spec.js
+│   ├── checkout.spec.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── playwright.config.ts
+└── README.md
+```
+**4) Running tests**
+Setup
 
-Run All test files:
+- Run All test files:
+```
 npx playwright test
+```
 
-Run a specific test file:
+- Run a specific test file:
+```
 npx playwright test inventory.spec.js
-
-Run tests with headful mode:
+```
+- Run tests with headful mode:
+```
 npx playwright test --headed
-
-Run tests on specific browser:
+```
+- Run tests on specific browser:
+```
 npx playwright test cart.spec.js --project=chromium
-
-Run tests on debug mode:
+```
+- Run tests on debug mode:
+```
 npx playwright test cart.spec.js --debug
+```
 
-Generate HTML report:
-npx playwright show-report
-
-Monocart report:
-json: test-results/monocart-report.json
-view report: npx monocart show-report test-results/monocart-report.html
-
-
+**5) Reports**
+Playwright HTML report:
+- Monocart HTML report:
+  -`Generated at: test-results/monocart-report.html`
+- or open via:
+    ```
+    npx monocart show-report test-results/monocart-report.html`
+    ```
+> ⚙️ **Note:** Monocart is already configured in `reporter`.It aggregates run data into a single, modern HTML report.
 Features Covered
 1. Authentication:
 
